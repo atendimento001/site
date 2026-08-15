@@ -65,6 +65,252 @@
       color: #333;
       line-height: 1.6;
     }
+
+    /* ESTILOS: Rodapé e Modais de Políticas/Termos */
+    footer {
+      background-color: #0a004b;
+      color: #ffffff;
+      padding: 30px 20px;
+      text-align: center;
+      font-size: 14px;
+    }
+    footer a {
+      color: #ffffff;
+      text-decoration: underline;
+      margin: 0 10px;
+      cursor: pointer;
+    }
+    footer a:hover {
+      color: #25D366;
+    }
+
+    .modal-policy {
+      display: none;
+      position: fixed;
+      z-index: 10000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.7);
+    }
+    .modal-policy-content {
+      background-color: #ffffff;
+      margin: 5% auto;
+      padding: 30px;
+      border-radius: 8px;
+      max-width: 800px;
+      width: 90%;
+      color: #333333;
+      text-align: left;
+      max-height: 80vh;
+      overflow-y: auto;
+    }
+    .modal-policy-content h2 {
+      color: #0a004b;
+      margin-top: 0;
+      font-size: 28px;
+      border-bottom: 2px solid #25D366;
+      padding-bottom: 15px;
+    }
+    .modal-policy-content h3 {
+      color: #0a004b;
+      margin-top: 25px;
+      font-size: 20px;
+    }
+    .modal-policy-content p {
+      line-height: 1.8;
+      margin-bottom: 15px;
+      color: #444;
+    }
+    .modal-policy-content ul {
+      margin: 15px 0 20px 20px;
+      line-height: 1.8;
+    }
+    .modal-policy-content ul li {
+      margin-bottom: 8px;
+      color: #444;
+    }
+    .close-modal {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .close-modal:hover {
+      color: #000;
+    }
+
+    /* ====== RESPONSIVIDADE ====== */
+    @media (max-width: 768px) {
+      header.home .container {
+        flex-wrap: wrap;
+      }
+      
+      nav {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10px;
+      }
+      
+      .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: #0a004b;
+        padding: 20px;
+        gap: 15px;
+      }
+      
+      .menu.open {
+        display: flex;
+      }
+      
+      .menu-icon {
+        display: block !important;
+        cursor: pointer;
+      }
+      
+      .banner {
+        height: auto;
+        min-height: 350px;
+      }
+      
+      .banner-item {
+        padding: 30px 20px;
+      }
+      
+      .desc-banner h2 {
+        font-size: 24px;
+      }
+      
+      .desc-banner p {
+        font-size: 16px;
+      }
+      
+      .cards-banner {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .bloco {
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+      }
+      
+      .sobre {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+      }
+      
+      .sobre img {
+        max-width: 80%;
+        margin-top: 20px;
+      }
+      
+      .conteudo-1 {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .img-conteudo-1 img {
+        max-width: 80%;
+      }
+      
+      .feedback-container {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .feedback-card {
+        width: 100%;
+        max-width: 350px;
+      }
+      
+      .whatsapp-float {
+        bottom: 15px;
+        right: 15px;
+      }
+      
+      .whatsapp-icon {
+        width: 45px;
+        height: 45px;
+      }
+      
+      .modal-policy-content {
+        margin: 10% auto;
+        padding: 20px;
+        width: 95%;
+      }
+      
+      .modal-policy-content h2 {
+        font-size: 22px;
+      }
+      
+      .modal-policy-content h3 {
+        font-size: 18px;
+      }
+      
+      .prev, .next {
+        padding: 8px 12px;
+        font-size: 18px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .logo {
+        font-size: 18px;
+      }
+      
+      .desc-banner h2 {
+        font-size: 20px;
+      }
+      
+      .desc-banner p {
+        font-size: 14px;
+      }
+      
+      .button-banner a {
+        padding: 10px 20px;
+        font-size: 14px;
+      }
+      
+      .sobre-nos h1 {
+        font-size: 28px;
+      }
+      
+      .faq-title {
+        font-size: 22px;
+      }
+      
+      .faq-question {
+        font-size: 14px;
+        padding: 14px;
+      }
+      
+      footer {
+        font-size: 12px;
+        padding: 20px 15px;
+      }
+      
+      footer a {
+        margin: 0 5px;
+      }
+      
+      .modal-policy-content {
+        padding: 15px;
+      }
+      
+      .modal-policy-content ul {
+        margin-left: 15px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -72,7 +318,7 @@
     <div class="container">
       <a href="https://wa.me/5511925595379?text=Ol%C3%A1%2C%20preciso%20de%20atendimento!" class="logo">Área do cliente</a>
       <div class="menu-icon" id="menu-toggle">
-        <i class="ph ph-list"></i>
+        <i class="ph ph-list">☰</i>
       </div>
       <nav>
         <ul class="menu" id="menu">
@@ -93,7 +339,7 @@
           <h2>Conte com nosso atendimento 24 horas, especializado para solucionar seu problema!</h2>
           <p>Segurança e praticidade para emissão de 2ª via de boleto e antecipação.</p>
           <div class="button-banner one-1-b">
-            <a href="https://wa.me/5511925595379?text=Ol%C3%A1%2C%20preciso%20de%20atendimento!">
+            <a href="https://wa.me/5511925595379?text=Ol%C3%A1%2C%20gostaria%20de%20atendimento%20personalizado!">
               Clique aqui e comece sua conversa
               <i class=""></i>
             </a>
@@ -105,7 +351,7 @@
           <h2>2ª via de boleto <br />emita sua segunda via de um jeito fácil</h2>
           <p>Precisa da segunda via do seu boleto? <br />Agora ficou simples e rápido!</p>
           <div class="button-banner seg-2-b">
-            <a href="https://wa.me/5511925595379?text=Ol%C3%A1%2C%20preciso%20de%20atendimento!">
+            <a href="https://wa.me/5511925595379?text=Ol%C3%A1%2C%20preciso%20solicitar%20a%202%C2%AA%20via%20do%20meu%20boleto!">
               Solicitar meu atendimento
               <i class="ph ph-arrow-line-right"></i>
             </a>
@@ -119,11 +365,11 @@
 
   <section class="cards" id="home">
     <div class="cards-banner">
-      <a href="https://wa.me/5511925595379?text=Ol%C3%A1%2C%20preciso%20de%20atendimento!" class="bloco">2ª via de boleto</a>
-      <a href="https://wa.me/5511925595379?text=Ol%C3%A1%2C%20preciso%20de%20atendimento!" class="bloco">Liquidação antecipada</a>
-      <a href="https://wa.me/5511925595379?text=Ol%C3%A1%2C%20preciso%20de%20atendimento!" class="bloco">Atualizar boleto vencido</a>
-      <a href="https://wa.me/5511925595379?text=Ol%C3%A1%2C%20preciso%20de%20atendimento!" class="bloco">Antecipar parcelas</a>
-      <a href="https://wa.me/5511925595379?text=Ol%C3%A1%2C%20preciso%20de%20atendimento!" class="bloco">Atendimento online</a>
+      <a href="https://wa.me/5511925595379?text=Ol%C3%A1%2C%20preciso%20solicitar%20a%202%C2%AA%20via%20do%20meu%20boleto!" class="bloco">2ª via de boleto</a>
+      <a href="https://wa.me/5511925595379?text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20liquida%C3%A7%C3%A3o%20antecipada%20do%20meu%20d%C3%A9bito!" class="bloco">Liquidação antecipada</a>
+      <a href="https://wa.me/5511925595379?text=Ol%C3%A1%2C%20meu%20boleto%20est%C3%A1%20vencido%2C%20como%20fa%C3%A7o%20para%20atualizar%3F" class="bloco">Atualizar boleto vencido</a>
+      <a href="https://wa.me/5511925595379?text=Ol%C3%A1%2C%20gostaria%20de%20antecipar%20minhas%20parcelas!" class="bloco">Antecipar parcelas</a>
+      <a href="https://wa.me/5511925595379?text=Ol%C3%A1%2C%20preciso%20de%20atendimento%20online%20urgente!" class="bloco">Atendimento online</a>
     </div>
   </section>
 
@@ -133,7 +379,7 @@
       <h1>Pague seu débito ao credor e não ao fraudador.</h1>
       <p>Apresentamos algumas dicas para que você não caia em golpes. Suspeitou de mensagens, e-mails ou páginas falsas? Não clique, não baixe arquivos, e nos avise:</p>
       <div class="button-chamada">
-        <a href="https://wa.me/5511925595379?text=Ol%C3%A1%2C%20preciso%20de%20atendimento!">Iniciar atendimento →</a>
+        <a href="https://wa.me/5511925595379?text=Ol%C3%A1%2C%20suspeito%20de%20um%20golpe%20e%20preciso%20de%20ajuda!">Iniciar atendimento →</a>
       </div>
     </div>
     <img src="./Central de Atendimento_files/pessoa-1.png" alt="Pessoa em atendimento" />
@@ -146,7 +392,7 @@
         <p>Facilite seu dia</p>
         <p>Nós acreditamos que um bom atendimento consiste em processos simples e seguros, acessíveis onde e quando o cliente preferir.</p>
         <br /><br />
-        <a href="https://wa.me/5511925595379?text=Ol%C3%A1%2C%20preciso%20de%20atendimento!" class="button-conteudo-1">Solicitar Boleto</a>
+        <a href="https://wa.me/5511925595379?text=Ol%C3%A1%2C%20quero%20solicitar%20um%20boleto%20para%20pagamento!" class="button-conteudo-1">Solicitar Boleto</a>
       </div>
       <div class="img-conteudo-1">
         <img src="./Central de Atendimento_files/bonecos.png" alt="Ilustração de atendimento" />
@@ -172,22 +418,21 @@
     </div>
   </section>
 
-<!-- Menu Mobile (aparece só no celular) -->
-<div class="menu-mobile" id="menuMobile">
-    <span class="fechar-menu" id="fecharMenu">×</span>
-    <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#servicos">Serviços</a></li>
-        <li><a href="#contato">Contato</a></li>
-        <li><a href="https://wa.me/5511925595379" class="botao-whatsapp">Fale conosco</a></li>
-    </ul>
-</div>
+  <!-- Menu Mobile -->
+  <div class="menu-mobile" id="menuMobile">
+      <span class="fechar-menu" id="fecharMenu">×</span>
+      <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#contato">Contato</a></li>
+          <li><a href="https://wa.me/5511925595379?text=Ol%C3%A1%2C%20preciso%20de%20atendimento!" class="botao-whatsapp">Fale conosco</a></li>
+      </ul>
+  </div>
 
-<!-- Botão ☰ para abrir o menu (só aparece no celular) -->
-<div class="botao-menu-mobile" id="botaoMenu">☰</div>
+  <div class="botao-menu-mobile" id="botaoMenu">☰</div>
 
-  <!-- Nova Seção de Perguntas Frequentes -->
+  <!-- Perguntas Frequentes -->
   <section class="faq-section">
     <h2 class="faq-title">Perguntas Frequentes</h2>
     <div class="faq-container">
@@ -195,6 +440,8 @@
         <button class="faq-question">O que é a 2ª via de boleto?</button>
         <div class="faq-answer">
           <p>A segunda via de boleto é um documento reemitido quando você perdeu o boleto original ou precisa de uma nova cópia para pagamento. É um serviço totalmente seguro e gratuito.</p>
+          <br>
+          <a href="https://wa.me/5511925595379?text=Ol%C3%A1%2C%20preciso%20solicitar%20a%202%C2%AA%20via%20do%20meu%20boleto!" style="display:inline-block; background:#25D366; color:#fff; padding:10px 20px; border-radius:25px; text-decoration:none; font-weight:600;">Solicitar 2ª via agora</a>
         </div>
       </div>
       
@@ -202,6 +449,8 @@
         <button class="faq-question">Como posso antecipar parcelas?</button>
         <div class="faq-answer">
           <p>Você pode antecipar parcelas acessando nosso portal ou entrando em contato via WhatsApp. Basta selecionar a opção de antecipação e seguir as instruções na tela. Oferecemos condições especiais para pagamento antecipado.</p>
+          <br>
+          <a href="https://wa.me/5511925595379?text=Ol%C3%A1%2C%20gostaria%20de%20antecipar%20minhas%20parcelas!" style="display:inline-block; background:#25D366; color:#fff; padding:10px 20px; border-radius:25px; text-decoration:none; font-weight:600;">Antecipar agora</a>
         </div>
       </div>
       
@@ -216,77 +465,249 @@
         <button class="faq-question">Como posso entrar em contato com o suporte?</button>
         <div class="faq-answer">
           <p>Nosso atendimento está disponível 24 horas por dia através de múltiplos canais: WhatsApp exclusivo, chat online em nosso site, e-mail e telefone. Recomendamos o WhatsApp para respostas mais rápidas e eficientes.</p>
+          <br>
+          <a href="https://wa.me/5511925595379?text=Ol%C3%A1%2C%20preciso%20de%20suporte%20urgente!" style="display:inline-block; background:#25D366; color:#fff; padding:10px 20px; border-radius:25px; text-decoration:none; font-weight:600;">Falar com suporte</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Scripts -->
-  <script src="./Central de Atendimento_files/menu.js.download"></script>
-  <script src="./Central de Atendimento_files/banner.js.download"></script>
-  <script src="./Central de Atendimento_files/cards.js.download"></script>
-  <script src="script.js" defer></script>
+  <!-- Botão flutuante do WhatsApp -->
+  <div class="whatsapp-float">
+    <a href="https://wa.me/5511925595379?text=Ol%C3%A1%2C%20preciso%20de%20atendimento!" target="_blank" title="Fale Conosco">
+      <svg class="whatsapp-icon" width="50px" height="50px" viewBox="0 0 1219.547 1225.016">
+        <path style="fill: #E0E0E0;" d="M1041.858 178.02C927.206 63.289 774.753.07 612.325 0 277.617 0 5.232 272.298 5.098 606.991c-.039 106.986 27.915 211.42 81.048 303.476L0 1225.016l321.898-84.406c88.689 48.368 188.547 73.855 290.166 73.896h.258.003c334.654 0 607.08-272.346 607.222-607.023.056-162.208-63.052-314.724-177.689-429.463zm-429.533 933.963h-.197c-90.578-.048-179.402-24.366-256.878-70.339l-18.438-10.93-191.021 50.083 51-186.176-12.013-19.087c-50.525-80.336-77.198-173.175-77.16-268.504.111-278.186 226.507-504.503 504.898-504.503 134.812.056 261.519 52.604 356.814 147.965 95.289 95.36 147.728 222.128 147.688 356.948-.118 278.195-226.522 504.543-504.693 504.543z"></path>
+        <path style="fill: #25D366;" d="M27.875 1190.114l82.211-300.18c-50.719-87.852-77.391-187.523-77.359-289.602.133-319.398 260.078-579.25 579.469-579.25 155.016.07 300.508 60.398 409.898 169.891 109.414 109.492 169.633 255.031 169.57 409.812-.133 319.406-260.094 579.281-579.445 579.281-.023 0 .016 0 0 0h-.258c-96.977-.031-192.266-24.375-276.898-70.5l-307.188 80.548z"></path>
+        <path fill="#FFF" d="M462.273 349.294c-11.234-24.977-23.062-25.477-33.75-25.914-8.742-.375-18.75-.352-28.742-.352-10 0-26.25 3.758-39.992 18.766-13.75 15.008-52.5 51.289-52.5 125.078 0 73.797 53.75 145.102 61.242 155.117 7.5 10 103.758 166.266 256.203 226.383 126.695 49.961 152.477 40.023 179.977 37.523s88.734-36.273 101.234-71.297c12.5-35.016 12.5-65.031 8.75-71.305-3.75-6.25-13.75-10-28.75-17.5s-88.734-43.789-102.484-48.789-23.75-7.5-33.75 7.516c-10 15-38.727 48.773-47.477 58.773-8.75 10.023-17.5 11.273-32.5 3.773-15-7.523-63.305-23.344-120.609-74.438-44.586-39.75-74.688-88.844-83.438-103.859-8.75-15-.938-23.125 6.586-30.602 6.734-6.719 15-17.508 22.5-26.266 7.484-8.758 9.984-15.008 14.984-25.008 5-10.016 2.5-18.773-1.25-26.273s-32.898-81.67-46.234-111.326z"></path>
+      </svg>
+    </a>
+  </div>
 
-<script>
-// Pega os elementos do menu
-const botaoMenu = document.getElementById('botaoMenu');
-const menuMobile = document.getElementById('menuMobile');
-const fecharMenu = document.getElementById('fecharMenu');
+  <footer>
+    <p>&copy; Central de Atendimento. Todos os direitos reservados.</p>
+    <p>
+      <a id="btnPrivacidade">Política de Privacidade</a> | 
+      <a id="btnTermos">Termos de Uso</a>
+    </p>
+  </footer>
 
-// Abre o menu quando clica no ☰
-botaoMenu.addEventListener('click', function() {
-    menuMobile.classList.add('active');
-});
+  <!-- Modal Política de Privacidade -->
+  <div id="modalPrivacidade" class="modal-policy">
+    <div class="modal-policy-content">
+      <span class="close-modal" id="closePrivacidade">&times;</span>
+      <h2>Política de Privacidade</h2>
+      
+      <p>A sua privacidade é extremamente importante para nós. Esta Política de Privacidade descreve como a <strong>Central de Atendimento</strong> coleta, usa, compartilha e protege as informações pessoais que você nos fornece ao utilizar nossos serviços.</p>
 
-// Fecha o menu quando clica no ×
-fecharMenu.addEventListener('click', function() {
-    menuMobile.classList.remove('active');
-});
+      <h3>1. Informações que Coletamos</h3>
+      <p>Coletamos informações para fornecer um atendimento personalizado e eficiente:</p>
+      <ul>
+        <li><strong>Dados de identificação:</strong> Nome completo, CPF, RG, data de nascimento.</li>
+        <li><strong>Dados de contato:</strong> E-mail, número de telefone, WhatsApp.</li>
+        <li><strong>Dados financeiros:</strong> Informações sobre boletos, parcelas, contratos e pagamentos.</li>
+        <li><strong>Dados de navegação:</strong> Endereço IP, tipo de dispositivo, navegador, páginas acessadas.</li>
+      </ul>
 
-// Fecha o menu quando clica em um link
-const linksMenu = document.querySelectorAll('.menu-mobile a');
-linksMenu.forEach(link => {
-    link.addEventListener('click', function() {
-        menuMobile.classList.remove('active');
-    });
-});
-</script>
+      <h3>2. Como Utilizamos suas Informações</h3>
+      <p>Utilizamos seus dados para:</p>
+      <ul>
+        <li>Processar solicitações de 2ª via de boletos e antecipação de parcelas.</li>
+        <li>Prestar atendimento ao cliente personalizado.</li>
+        <li>Enviar comunicados sobre seu contrato ou débitos.</li>
+        <li>Melhorar nossos serviços e a experiência do usuário.</li>
+        <li>Cumprir obrigações legais e regulatórias.</li>
+      </ul>
+
+      <h3>3. Compartilhamento de Dados</h3>
+      <p>Seus dados pessoais podem ser compartilhados com:</p>
+      <ul>
+        <li><strong>Parceiros comerciais:</strong> Para processamento de pagamentos e emissão de boletos.</li>
+        <li><strong>Autoridades legais:</strong> Quando exigido por lei ou para proteção de direitos.</li>
+        <li><strong>Prestadores de serviço:</strong> Empresas terceirizadas que auxiliam em nosso atendimento.</li>
+      </ul>
+      <p>Não vendemos ou alugamos suas informações pessoais para terceiros.</p>
+
+      <h3>4. Segurança dos Dados</h3>
+      <p>Implementamos medidas de segurança técnicas e organizacionais para proteger suas informações contra acesso não autorizado, perda ou destruição. Utilizamos criptografia em transmissões de dados e controles de acesso rigorosos.</p>
+
+      <h3>5. Seus Direitos</h3>
+      <p>Você tem direito a:</p>
+      <ul>
+        <li>Acessar, corrigir ou atualizar seus dados pessoais.</li>
+        <li>Solicitar a exclusão de seus dados, quando aplicável.</li>
+        <li>Revogar consentimentos previamente fornecidos.</li>
+        <li>Saber com quem seus dados foram compartilhados.</li>
+      </ul>
+      <p>Para exercer seus direitos, entre em contato pelo WhatsApp (11) 92559-5379.</p>
+
+      <h3>6. Cookies e Tecnologias de Rastreamento</h3>
+      <p>Utilizamos cookies para melhorar sua experiência de navegação. Você pode gerenciar as configurações de cookies em seu navegador a qualquer momento.</p>
+
+      <h3>7. Alterações nesta Política</h3>
+      <p>Esta política pode ser atualizada periodicamente. Recomendamos que você a revise regularmente. Alterações significativas serão comunicadas através do nosso site ou por e-mail.</p>
+
+      <p><strong>Última atualização:</strong> 14 de agosto de 2026</p>
+    </div>
+  </div>
+
+  <!-- Modal Termos de Uso -->
+  <div id="modalTermos" class="modal-policy">
+    <div class="modal-policy-content">
+      <span class="close-modal" id="closeTermos">&times;</span>
+      <h2>Termos de Uso</h2>
+      
+      <p>Ao acessar e utilizar o site da <strong>Central de Atendimento</strong>, você concorda em cumprir e estar vinculado aos seguintes Termos de Uso. Caso não concorde com estes termos, por favor, não utilize nossos serviços.</p>
+
+      <h3>1. Aceitação dos Termos</h3>
+      <p>Ao utilizar nosso site e serviços, você declara ter lido, compreendido e aceitado integralmente estes Termos de Uso. Estes termos se aplicam a todos os visitantes, usuários e clientes.</p>
+
+      <h3>2. Serviços Oferecidos</h3>
+      <p>A Central de Atendimento oferece:</p>
+      <ul>
+        <li>Emissão de 2ª via de boletos bancários.</li>
+        <li>Antecipação de parcelas com condições especiais.</li>
+        <li>Atualização de boletos vencidos.</li>
+        <li>Atendimento online via WhatsApp e chat.</li>
+        <li>Consultas sobre contratos e débitos.</li>
+      </ul>
+
+      <h3>3. Cadastro e Segurança</h3>
+      <p>Para utilizar nossos serviços, você pode precisar fornecer informações pessoais. Você é responsável pela veracidade e atualização dos dados fornecidos. Sua conta é pessoal e intransferível, sendo de sua responsabilidade manter a confidencialidade de suas credenciais.</p>
+
+      <h3>4. Responsabilidades do Usuário</h3>
+      <p>Ao utilizar nossos serviços, você concorda em:</p>
+      <ul>
+        <li>Fornecer informações verdadeiras, precisas e completas.</li>
+        <li>Não utilizar os serviços para fins ilegais ou fraudulentos.</li>
+        <li>Não tentar acessar áreas restritas do sistema.</li>
+        <li>Não compartilhar sua conta com terceiros.</li>
+        <li>Não realizar atividades que possam comprometer a segurança do sistema.</li>
+      </ul>
+
+      <h3>5. Propriedade Intelectual</h3>
+      <p>Todo o conteúdo do site, incluindo textos, imagens, logotipos, ícones e design, é de propriedade exclusiva da Central de Atendimento ou de seus licenciadores. É proibida a reprodução, distribuição ou uso comercial sem autorização prévia por escrito.</p>
+
+      <h3>6. Limitação de Responsabilidade</h3>
+      <p>A Central de Atendimento se esforça para manter seus serviços disponíveis e seguros, porém não garante:</p>
+      <ul>
+        <li>Que o serviço estará disponível 100% do tempo sem interrupções.</li>
+        <li>Que o serviço estará livre de erros ou vírus.</li>
+        <li>Que os resultados obtidos serão sempre os esperados.</li>
+      </ul>
+      <p>Não nos responsabilizamos por danos indiretos, perda de dados ou lucros cessantes decorrentes do uso ou impossibilidade de uso do serviço.</p>
+
+      <h3>7. Links para Terceiros</h3>
+      <p>Nosso site pode conter links para sites de terceiros. Não nos responsabilizamos pelo conteúdo, políticas de privacidade ou práticas desses sites. Recomendamos que você leia os termos e políticas de cada site visitado.</p>
+
+      <h3>8. Pagamentos e Transações</h3>
+      <p>As transações financeiras realizadas através do nosso site são processadas por instituições parceiras. A Central de Atendimento não armazena dados de cartões de crédito ou contas bancárias. Para informações sobre segurança de pagamentos, consulte nossa Política de Privacidade.</p>
+
+      <h3>9. Rescisão</h3>
+      <p>Reservamo-nos o direito de suspender ou encerrar o acesso ao serviço, sem aviso prévio, em caso de violação destes Termos de Uso ou de atividades fraudulentas detectadas.</p>
+
+      <h3>10. Alterações nos Termos</h3>
+      <p>Estes Termos de Uso podem ser atualizados a qualquer momento. A versão mais recente estará sempre disponível em nosso site. O uso continuado do serviço após alterações constitui sua aceitação dos termos revisados.</p>
+
+      <h3>11. Lei Aplicável</h3>
+      <p>Estes Termos de Uso são regidos pela legislação brasileira. Qualquer disputa será resolvida no foro da comarca de São Paulo - SP.</p>
+
+      <p><strong>Última atualização:</strong> 14 de agosto de 2026</p>
+    </div>
+  </div>
 
   <script>
-    // Script para o funcionamento das perguntas frequentes
+    // Menu Mobile
+    const botaoMenu = document.getElementById('botaoMenu');
+    const menuMobile = document.getElementById('menuMobile');
+    const fecharMenu = document.getElementById('fecharMenu');
+
+    if (botaoMenu && menuMobile) {
+      botaoMenu.addEventListener('click', function() {
+        menuMobile.classList.add('active');
+      });
+    }
+
+    if (fecharMenu && menuMobile) {
+      fecharMenu.addEventListener('click', function() {
+        menuMobile.classList.remove('active');
+      });
+    }
+
+    // Fechar menu ao clicar em link
+    document.querySelectorAll('.menu-mobile ul li a').forEach(link => {
+      link.addEventListener('click', function() {
+        menuMobile.classList.remove('active');
+      });
+    });
+
+    // Menu toggle para versão mobile (menu superior)
+    const menuToggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+    
+    if (menuToggle && menu) {
+      menuToggle.addEventListener('click', function() {
+        menu.classList.toggle('open');
+      });
+    }
+
+    // FAQ Accordion
     document.querySelectorAll('.faq-question').forEach(question => {
       question.addEventListener('click', () => {
         question.classList.toggle('active');
         const answer = question.nextElementSibling;
         const isOpen = answer.style.display === 'block';
-        
-        // Fecha todas as respostas primeiro
-        document.querySelectorAll('.faq-answer').forEach(ans => {
-          ans.style.display = 'none';
-        });
-        document.querySelectorAll('.faq-question').forEach(q => {
-          q.classList.remove('active');
-        });
-        
-        // Abre apenas a resposta clicada, se não estiver aberta
+        document.querySelectorAll('.faq-answer').forEach(ans => ans.style.display = 'none');
+        document.querySelectorAll('.faq-question').forEach(q => q.classList.remove('active'));
         if (!isOpen) {
           answer.style.display = 'block';
           question.classList.add('active');
         }
       });
     });
+
+    // Modais
+    const modalPrivacidade = document.getElementById('modalPrivacidade');
+    const modalTermos = document.getElementById('modalTermos');
+    const btnPrivacidade = document.getElementById('btnPrivacidade');
+    const btnTermos = document.getElementById('btnTermos');
+    const closePrivacidade = document.getElementById('closePrivacidade');
+    const closeTermos = document.getElementById('closeTermos');
+
+    if (btnPrivacidade) btnPrivacidade.onclick = () => modalPrivacidade.style.display = "block";
+    if (btnTermos) btnTermos.onclick = () => modalTermos.style.display = "block";
+    if (closePrivacidade) closePrivacidade.onclick = () => modalPrivacidade.style.display = "none";
+    if (closeTermos) closeTermos.onclick = () => modalTermos.style.display = "none";
+
+    window.onclick = function(event) {
+      if (event.target == modalPrivacidade) modalPrivacidade.style.display = "none";
+      if (event.target == modalTermos) modalTermos.style.display = "none";
+    }
+
+    // Banner Carousel
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.banner-item');
+    const totalSlides = slides.length;
+    const prevBtn = document.querySelector('.prev');
+    const nextBtn = document.querySelector('.next');
+
+    function showSlide(index) {
+      if (index < 0) index = totalSlides - 1;
+      if (index >= totalSlides) index = 0;
+      currentSlide = index;
+      const offset = -currentSlide * 100;
+      const carousel = document.querySelector('.banner-carrousel');
+      if (carousel) {
+        carousel.style.transform = `translateX(${offset}%)`;
+      }
+    }
+
+    if (prevBtn && nextBtn) {
+      prevBtn.addEventListener('click', () => showSlide(currentSlide - 1));
+      nextBtn.addEventListener('click', () => showSlide(currentSlide + 1));
+    }
+
+    // Auto slide
+    setInterval(() => showSlide(currentSlide + 1), 5000);
   </script>
-
-  <!-- Botão flutuante do WhatsApp -->
- <div class="whatsapp-float">
-        <a href="https://wa.me/5511925595379?text=Ol%C3%A1%2C%20preciso%20de%20atendimento!" target="_blank" title="Fale Conosco">
-            <svg class="whatsapp-icon" width="50px" height="50px" viewBox="0 0 1219.547 1225.016">
-                <path style="fill: #E0E0E0;" d="M1041.858 178.02C927.206 63.289 774.753.07 612.325 0 277.617 0 5.232 272.298 5.098 606.991c-.039 106.986 27.915 211.42 81.048 303.476L0 1225.016l321.898-84.406c88.689 48.368 188.547 73.855 290.166 73.896h.258.003c334.654 0 607.08-272.346 607.222-607.023.056-162.208-63.052-314.724-177.689-429.463zm-429.533 933.963h-.197c-90.578-.048-179.402-24.366-256.878-70.339l-18.438-10.93-191.021 50.083 51-186.176-12.013-19.087c-50.525-80.336-77.198-173.175-77.16-268.504.111-278.186 226.507-504.503 504.898-504.503 134.812.056 261.519 52.604 356.814 147.965 95.289 95.36 147.728 222.128 147.688 356.948-.118 278.195-226.522 504.543-504.693 504.543z"></path>
-                <path style="fill: #25D366;" d="M27.875 1190.114l82.211-300.18c-50.719-87.852-77.391-187.523-77.359-289.602.133-319.398 260.078-579.25 579.469-579.25 155.016.07 300.508 60.398 409.898 169.891 109.414 109.492 169.633 255.031 169.57 409.812-.133 319.406-260.094 579.281-579.445 579.281-.023 0 .016 0 0 0h-.258c-96.977-.031-192.266-24.375-276.898-70.5l-307.188 80.548z"></path>
-                <path fill="#FFF" d="M462.273 349.294c-11.234-24.977-23.062-25.477-33.75-25.914-8.742-.375-18.75-.352-28.742-.352-10 0-26.25 3.758-39.992 18.766-13.75 15.008-52.5 51.289-52.5 125.078 0 73.797 53.75 145.102 61.242 155.117 7.5 10 103.758 166.266 256.203 226.383 126.695 49.961 152.477 40.023 179.977 37.523s88.734-36.273 101.234-71.297c12.5-35.016 12.5-65.031 8.75-71.305-3.75-6.25-13.75-10-28.75-17.5s-88.734-43.789-102.484-48.789-23.75-7.5-33.75 7.516c-10 15-38.727 48.773-47.477 58.773-8.75 10.023-17.5 11.273-32.5 3.773-15-7.523-63.305-23.344-120.609-74.438-44.586-39.75-74.688-88.844-83.438-103.859-8.75-15-.938-23.125 6.586-30.602 6.734-6.719 15-17.508 22.5-26.266 7.484-8.758 9.984-15.008 14.984-25.008 5-10.016 2.5-18.773-1.25-26.273s-32.898-81.67-46.234-111.326z"></path>
-            </svg>
-        </a>
-   </div>
-
 </body>
 </html>
